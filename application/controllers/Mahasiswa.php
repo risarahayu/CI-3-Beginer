@@ -105,8 +105,12 @@ class Mahasiswa extends CI_Controller {
 			'jurusan'=> $jurusan
 		];
 
+		$where= [
+			'id' => $id
+		];
+
 		// kirim ke model, input adalah nama function di model
-		$this->Mahasiswa_model->update($data);
+		$this->Mahasiswa_model->update($data, $where);
 		// redirect back ke halaman mahasiswa
 		header('Location:'.BASEURL.'/Mahasiswa');
 	}
