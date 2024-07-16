@@ -108,10 +108,10 @@
                             <!-- /input-group -->
                         </li>
                         <li>
-                            <a href="index.html" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
+                            <a href="<?=BASEURL ?>Welcome" class="active"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                         </li>
                         <li>
-                            <a href="tables.html"><i class="fa fa-graduation-cap"></i> Mahasiswa</a>
+                            <a href="<?=BASEURL ?>Mahasiswa"><i class="fa fa-graduation-cap"></i> Mahasiswa</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
