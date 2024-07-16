@@ -30,6 +30,9 @@ class Mahasiswa extends CI_Controller {
 	{
 		$data['title'] = 'Data Mahasiswa';
 
+		// ambil data dari model
+		$data['mahasiswa']=$this->Mahasiswa_model->getAllMahasiswa()->result();
+
 		$this->load->view('template/header', $data);
 		$this->load->view('template/nav', $data);
 		$this->load->view('mahasiswa/index', $data);

@@ -20,15 +20,22 @@
                                                 </tr>
                                             </thead>
                                             <tbody>
-                                                <tr class="odd gradeX">
-                                                    <td>1</td>
-                                                    <td>Test</td>
-                                                    <td>12345</td>
-                                                    <td class="center">Programmer</td>
-                                                    <td class="center"><a href=""><i class="fa fa-edit"></i></a></td>
-                                                    <td class="center"><a href=""><i class="fa fa-trash" style="color:red;"></i></a></td>
-                                                </tr>
-                                                
+                                                <?php
+                                                $no=0;
+                                                foreach($mahasiswa as $row):
+                                                    $no++;
+                                                ?>
+                                                    <tr class="odd gradeX">
+                                                        <td>1</td>
+                                                        <td>Test</td>
+                                                        <td>12345</td>
+                                                        <td class="center">Programmer</td>
+                                                        <td class="center"><a href=""><i class="fa fa-edit"></i></a></td>
+                                                        <td class="center"><a href=""><i class="fa fa-trash" style="color:red;"></i></a></td>
+                                                    </tr>
+                                                <?php
+                                                    endforeach
+                                                ?>
                                             </tbody>
                                         </table>
                                     </div>
