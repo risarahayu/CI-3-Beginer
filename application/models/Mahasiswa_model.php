@@ -7,6 +7,6 @@ class Mahasiswa_model extends CI_Model{
     }
 
     public function getAllMahasiswa(){
-        return $this->db->query("SELECT * FROM mahasiswa ORDER BY id DESC");
+        return $this->db->query("SELECT * FROM mahasiswa ORDER BY id ASC");
     }
 }
