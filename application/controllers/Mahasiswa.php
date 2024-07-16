@@ -2,14 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Mahasiswa extends CI_Controller {
-	// load model
-	function __construct()
-	{
-		parent::__constuct();
-		// load model
-		$this->load->model('Mahasiswa_model');
-
-	}
+	
 	/**
 	 * Index Page for this controller.
 	 *
@@ -25,6 +18,14 @@ class Mahasiswa extends CI_Controller {
 	 * map to /index.php/welcome/<method_name>
 	 * @see https://codeigniter.com/userguide3/general/urls.html
 	 */
+	// load model
+	function __construct()
+	{
+		parent::__construct();
+		// load model
+		$this->load->model('Mahasiswa_model');
+
+	}
 	public function index()
 	{
 		$data['title'] = 'Data Mahasiswa';
