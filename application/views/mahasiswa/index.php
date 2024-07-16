@@ -26,10 +26,10 @@
                                                     $no++;
                                                 ?>
                                                     <tr class="odd gradeX">
-                                                        <td>1</td>
-                                                        <td>Test</td>
-                                                        <td>12345</td>
-                                                        <td class="center">Programmer</td>
+                                                        <td><?= $no?></td>
+                                                        <td><?= $row->nama ?></td>
+                                                        <td><?= $row->nim ?></td>
+                                                        <td class="center"><?= $row->jurusan ?></td>
                                                         <td class="center"><a href=""><i class="fa fa-edit"></i></a></td>
                                                         <td class="center"><a href=""><i class="fa fa-trash" style="color:red;"></i></a></td>
                                                     </tr>
