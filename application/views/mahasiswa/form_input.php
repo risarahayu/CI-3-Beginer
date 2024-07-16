@@ -1,23 +1,29 @@
 <div class="row">
     <div class="col-lg-6">
-        <h1><?=$title?></h1>
         <form role="form">
             <fieldset >
                 <div class="form-group">
-                    <input class="form-control" id="disabledInput" type="text" placeholder="" >
+                    <label for="">Nama Mahasiswa</label>
+                    <input class="form-control" name="nama" type="text" placeholder="" >
                 </div>
                 <div class="form-group">
-                    <label for="disabledSelect">Disabled select menu</label>
-                    <select id="disabledSelect" class="form-control">
-                        <option>Disabled select</option>
+                    <label for="">NIM</label>
+                    <input class="form-control" name="nim" type="text" placeholder="" >
+                </div>
+                <div class="form-group">
+                    <label for="">Jurusan</label>
+                    <select id="" class="form-control" name="jurusan">
+                        <option>Pilih jurusan</option>
+                        <option value="informatika">Informatika</option>
+                        <option value="elektro">Elektro</option>
                     </select>
                 </div>
                 <div class="checkbox">
                     <label>
-                        <input type="checkbox">Disabled Checkbox
+                        
                     </label>
                 </div>
-                <button type="submit" class="btn btn-primary">Disabled Button</button>
+                <button type="submit" class="btn btn-primary">Simpan</button>
             </fieldset>
         </form>
     </div>
