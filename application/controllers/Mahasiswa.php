@@ -42,6 +42,16 @@ class Mahasiswa extends CI_Controller {
 
 	public function store()
 	{
-		echo'test';
+		$nama = $this->input->post('nama');
+		$nim = $this->input->post('nim');
+		$jurusan = $this->input->post('jurusan');
+
+		// kirim ke model
+		$data=[
+			'nama'=> $nama,
+			'nim'=> $nim,
+			'jurusan'=> $jurusan
+		];
+		var_dump($data);
 	}
 }

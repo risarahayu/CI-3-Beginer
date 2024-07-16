@@ -1,14 +1,14 @@
 <div class="row">
     <div class="col-lg-6">
-        <form role="form" action="<?=BASEURL?>Mahasiswa/store">
+        <form role="form" method="post" action="<?= BASEURL ?>Mahasiswa/store">
             <fieldset >
                 <div class="form-group">
                     <label for="">Nama Mahasiswa</label>
-                    <input class="form-control" name="nama" type="text" placeholder="" >
+                    <input class="form-control" name="nama" type="text" >
                 </div>
                 <div class="form-group">
                     <label for="">NIM</label>
-                    <input class="form-control" name="nim" type="text" placeholder="" >
+                    <input class="form-control" name="nim" type="text" >
                 </div>
                 <div class="form-group">
                     <label for="">Jurusan</label>
