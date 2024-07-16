@@ -20,9 +20,11 @@ class Mahasiswa extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('template/header');
-		$this->load->view('template/nav');
-		$this->load->view('mahasiswa/index');
+		$data['title'] = 'Data Mahasiswa';
+
+		$this->load->view('template/header', $data);
+		$this->load->view('template/nav', $data);
+		$this->load->view('mahasiswa/index', $data);
 		$this->load->view('template/footer');
 	
 	}
