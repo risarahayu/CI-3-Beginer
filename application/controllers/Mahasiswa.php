@@ -28,4 +28,15 @@ class Mahasiswa extends CI_Controller {
 		$this->load->view('template/footer');
 	
 	}
+
+	public function tambah()
+	{
+		// nama folder/nama file
+		$data['title'] = 'Input data';
+
+		$this->load->view('template/header', $data);
+		$this->load->view('template/nav', $data);
+		$this->load->view('mahasiswa/form_input', $data);
+		$this->load->view('template/footer');
+	}
 }
