@@ -90,4 +90,25 @@ class Mahasiswa extends CI_Controller {
 		$this->load->view('mahasiswa/form_update', $data);
 		$this->load->view('template/footer');
 	}
+
+	public function update()
+	{
+		$id = $this->input->post('id');
+		$nama = $this->input->post('nama');
+		$nim = $this->input->post('nim');
+		$jurusan = $this->input->post('jurusan');
+
+		// dibuatkan array sebeleum dikirim ke model
+		$data=[
+			'nama'=> $nama,
+			'nim'=> $nim,
+			'jurusan'=> $jurusan
+		];
+
+		// kirim ke model, input adalah nama function di model
+		$this->Mahasiswa_model->update($data);
+		// redirect back ke halaman mahasiswa
+		header('Location:'.BASEURL.'/Mahasiswa');
+	}
+
 }

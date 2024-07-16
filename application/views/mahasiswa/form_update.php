@@ -1,9 +1,10 @@
 <div class="row">
     <div class="col-lg-6">
-        <form role="form" method="post" action="<?= BASEURL ?>Mahasiswa/store">
+        <form role="form" method="post" action="<?= BASEURL ?>Mahasiswa/update/">
             <?php 
                 foreach($ubah as $row):
             ?>
+            <input type="hidden" value="<?= $row->id?>" name="id">
             <fieldset >
                 <div class="form-group">
                     <label for="">Nama Mahasiswa</label>
