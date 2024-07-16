@@ -20,7 +20,7 @@
         <script src="<?=BASEURL ?>asset/js/morris.min.js"></script>
 
         <!-- jika kontrollernya adalah wolcome, maka jalankan  -->
-        <?php if(PAR2=='Welcome'){ ?>
+        <?php if(PAR2=='Welcome'|| PAR2==''){ ?>
             <script src="<?=BASEURL ?>asset/js/morris-data.js"></script>
         <?php }?>
 
