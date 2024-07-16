@@ -45,3 +45,8 @@
                         </div>
                         <!-- /.col-lg-12 -->
                     </div>
+                    <script>
+                        $('#inputData').on('click', function(){
+                            
+                        });
+                    </script>
