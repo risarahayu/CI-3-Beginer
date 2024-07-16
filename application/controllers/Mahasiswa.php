@@ -2,7 +2,14 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Mahasiswa extends CI_Controller {
+	// load model
+	function __construct()
+	{
+		parent::__constuct();
+		// load model
+		$this->load->model('Mahasiswa_model');
 
+	}
 	/**
 	 * Index Page for this controller.
 	 *
@@ -42,8 +49,7 @@ class Mahasiswa extends CI_Controller {
 
 	public function store()
 	{
-		// load model
-		$this->load->model('Mahasiswa_model');
+		
 
 		$nama = $this->input->post('nama');
 		$nim = $this->input->post('nim');
