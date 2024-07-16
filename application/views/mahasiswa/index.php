@@ -47,6 +47,9 @@
                     </div>
                     <script>
                         $('#inputData').on('click', function(){
-                            
+                            // mengubah judul
+                            // nah sampe sini sebenarnya sudah bisa mengubah data yg ada di dalam modalnya
+                            // tp tidak mungkin mengubah 'input data' dengan kode formulir
+                            $('.modal-title').html('Input Data');
                         });
                     </script>
