@@ -6,6 +6,7 @@
                                 </div>
                                 <!-- /.panel-heading -->
                                 <div class="panel-body">
+                                    <a href="" class="btn btn-primary" style="margin-bottom:5px;" type="button">Add data</a>
                                     <div class="table-responsive">
                                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                             <thead>
