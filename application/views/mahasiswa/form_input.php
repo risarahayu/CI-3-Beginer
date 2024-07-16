@@ -4,7 +4,6 @@
         <form role="form">
             <fieldset >
                 <div class="form-group">
-                    <label for="disabledSelect">Disabled input</label>
                     <input class="form-control" id="disabledInput" type="text" placeholder="" >
                 </div>
                 <div class="form-group">
