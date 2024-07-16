@@ -42,18 +42,21 @@ class Mahasiswa extends CI_Controller {
 
 	public function store()
 	{
+		// load model
+		$this->load->model('Mahasiswa_model');
+
 		$nama = $this->input->post('nama');
 		$nim = $this->input->post('nim');
 		$jurusan = $this->input->post('jurusan');
 
-
+		// dibuatkan array sebeleum dikirim ke model
 		$data=[
 			'nama'=> $nama,
 			'nim'=> $nim,
 			'jurusan'=> $jurusan
 		];
 
-		// kirim ke model
+		// kirim ke model, input adalah nama function di model
 		$this->Mahasiswa_model->input($data);
 		// redirect back ke halaman mahasiswa
 		header('Location:'.BASEURL.'/Mahasiswa');
