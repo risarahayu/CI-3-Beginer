@@ -30,8 +30,8 @@
                                                         <td><?= $row->nama ?></td>
                                                         <td><?= $row->nim ?></td>
                                                         <td class="center"><?= $row->jurusan ?></td>
-                                                        <td class="center"><a href=""><i class="fa fa-edit"></i></a></td>
-                                                        <td class="center"><a href=""><i class="fa fa-trash" style="color:red;"></i></a></td>
+                                                        <td class="center"><a href="<?= BASEURL ?>Mahasiswa/edit/<?= $row->id?>"><i class="fa fa-edit"></i></a></td>
+                                                        <td class="center"><a href="<?= BASEURL ?>Mahasiswa/<?= $row->id?>"><i class="fa fa-trash" style="color:red;"></i></a></td>
                                                     </tr>
                                                 <?php
                                                     endforeach

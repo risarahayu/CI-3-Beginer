@@ -42,9 +42,9 @@ class Mahasiswa extends CI_Controller {
 
 	public function tambah()
 	{
-		// nama folder/nama file
 		$data['title'] = 'Input data';
 
+		// nama folder/nama file
 		$this->load->view('template/header', $data);
 		$this->load->view('template/nav', $data);
 		$this->load->view('mahasiswa/form_input', $data);
@@ -75,5 +75,19 @@ class Mahasiswa extends CI_Controller {
 		
 		$this->load->view('mahasiswa/form_input_modal');
 
+	}
+
+	public function edit($id){
+		// id untuk mengambil id dari url
+		// echo $id; die();
+		$data['title'] = 'Ubah data';
+		// ubah ini menampung data yg diambil dari model/database
+		$data['ubah']=$this->Mahasiswa_model->getUbah($id)->result();
+		
+		// nama folder/nama file
+		$this->load->view('template/header', $data);
+		$this->load->view('template/nav', $data);
+		$this->load->view('mahasiswa/form_update', $data);
+		$this->load->view('template/footer');
 	}
 }
