@@ -51,12 +51,16 @@
                             // nah sampe sini sebenarnya sudah bisa mengubah data yg ada di dalam modalnya
                             // tp tidak mungkin mengubah 'input data' dengan kode formulir
                             $('.modal-title').html('Input Data');
-                            let url='';
+                            // url untuk menampung form input
+                            let url='<?=BASEURL?>Mahasiswa/tambahModal';
+                            // mealkukan permintaan ke server dengan method post menggunakan url tertentu
                             $.post(url,{
-
+                                // tidak mengirimkan apa apa ke server
                             },
-                            function(){
-
+                            function(data){
+                                // menampung apa yg dikembalikan oleh server yang ditampung oleh data
+                                // ambil semua yg ada di class modal-body, lalu ganti semua yg ada di dalamnya dengan data
+                                $('.modal-body').html(data);
                             });
                         });
                     </script>

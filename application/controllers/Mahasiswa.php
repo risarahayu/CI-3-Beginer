@@ -66,4 +66,11 @@ class Mahasiswa extends CI_Controller {
 		// redirect back ke halaman mahasiswa
 		header('Location:'.BASEURL.'/Mahasiswa');
 	}
+
+	public function tambahModal()
+	{
+		
+		$this->load->view('mahasiswa/form_input_modal');
+
+	}
 }
