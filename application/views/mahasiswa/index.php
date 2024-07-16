@@ -7,7 +7,7 @@
                                 <!-- /.panel-heading -->
                                 <div class="panel-body">
                                     <!-- <a href="<?=BASEURL?>Mahasiswa/tambah" class="btn btn-primary" style="margin-bottom:5px;" type="button" >Add data</a> -->
-                                    <a href="#" class="btn btn-primary" style="margin-bottom:5px;" type="button" data-toggle="modal" data-target="#myModal">Add data</a>
+                                    <a href="#" class="btn btn-primary" style="margin-bottom:5px;" type="button" data-toggle="modal" id="inputData" data-target="#myModal">Add data</a>
                                     <div class="table-responsive">
                                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                             <thead>
