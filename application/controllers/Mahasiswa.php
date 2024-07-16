@@ -39,4 +39,9 @@ class Mahasiswa extends CI_Controller {
 		$this->load->view('mahasiswa/form_input', $data);
 		$this->load->view('template/footer');
 	}
+
+	public function store()
+	{
+		echo'test';
+	}
 }
