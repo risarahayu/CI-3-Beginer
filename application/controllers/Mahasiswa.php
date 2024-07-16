@@ -99,18 +99,17 @@ class Mahasiswa extends CI_Controller {
 		$jurusan = $this->input->post('jurusan');
 
 		// dibuatkan array sebeleum dikirim ke model
+		// id nya ga usah karena kita tidak mengubah id
 		$data=[
 			'nama'=> $nama,
 			'nim'=> $nim,
 			'jurusan'=> $jurusan
 		];
 
-		$where= [
-			'id' => $id
-		];
+		
 
 		// kirim ke model, input adalah nama function di model
-		$this->Mahasiswa_model->update($data, $where);
+		$this->Mahasiswa_model->update($data, $id);
 		// redirect back ke halaman mahasiswa
 		header('Location:'.BASEURL.'/Mahasiswa');
 	}

@@ -3,6 +3,7 @@ class Mahasiswa_model extends CI_Model{
     public function input($data)
     {
         // $data adalah nama arraynya
+        // mahasiswa adalah nama tabelnya
         $this->db->insert('mahasiswa', $data);
     }
 
@@ -14,7 +15,9 @@ class Mahasiswa_model extends CI_Model{
         return $this->db->query("SELECT * FROM mahasiswa WHERE id = '$id';");
     }
 
-    public function update(){
-        
+    public function update($data, $id){
+        // akan mengubah berdasarkan id
+        $this->db->where('id', $id);
+        $this->db->update('mahasiswa', $data);
     }
 }
