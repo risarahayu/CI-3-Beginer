@@ -84,3 +84,10 @@ defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
 defined('BASEURL')      OR define('BASEURL', 'http://localhost/CodeIgniter-3.1.13/'); // highest automatically-assigned error code
+// mengambil base urlnya yaitu nama folder/nama controller
+$url = $_SERVER['REQUEST_URI'];
+// pisahkan antara nama folder dan controller
+$par = explode('/', $url);
+
+defined('PAR1')      OR define('PAR1', $par[1]); // setelah di cek, isinya ternyata nama folder projek
+defined('PAR2')      OR define('PAR2', $par[2]); // setelah dicek, isinya nama controller

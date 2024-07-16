@@ -18,7 +18,11 @@
         <!-- Morris Charts JavaScript -->
         <script src="<?=BASEURL ?>asset/js/raphael.min.js"></script>
         <script src="<?=BASEURL ?>asset/js/morris.min.js"></script>
-        <script src="<?=BASEURL ?>asset/js/morris-data.js"></script>
+
+        <!-- jika kontrollernya adalah wolcome, maka jalankan  -->
+        <?php if(PAR2=='Welcome'){ ?>
+            <script src="<?=BASEURL ?>asset/js/morris-data.js"></script>
+        <?php }?>
 
         <!-- Custom Theme JavaScript -->
         <script src="<?=BASEURL ?>asset/js/startmin.js"></script>
