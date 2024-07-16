@@ -46,12 +46,16 @@ class Mahasiswa extends CI_Controller {
 		$nim = $this->input->post('nim');
 		$jurusan = $this->input->post('jurusan');
 
-		// kirim ke model
+
 		$data=[
 			'nama'=> $nama,
 			'nim'=> $nim,
 			'jurusan'=> $jurusan
 		];
-		var_dump($data);
+
+		// kirim ke model
+		$this->Mahasiswa_model->input($data);
+		// redirect back ke halaman mahasiswa
+		header('Location:'.BASEURL.'/Mahasiswa');
 	}
 }
