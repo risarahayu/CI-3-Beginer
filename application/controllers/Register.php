@@ -22,6 +22,6 @@ class Register extends CI_Controller {
     public function register(){
         // karena di form methodnya Post
         $this->Register_model->register($_POST);
-        header('Location :'.BASEURL.'/Login');
+        header('Location:'.BASEURL.'Login');
     }
 }
