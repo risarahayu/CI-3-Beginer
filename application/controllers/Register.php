@@ -11,8 +11,9 @@ class Register extends CI_Controller {
 	}
 	public function index()
 	{
+        $data['title']='Register';
 	
-		$this->load->view('template/header');
+		$this->load->view('template/header', $data);
 		$this->load->view('register/index');
 		$this->load->view('template/footer');
 	
