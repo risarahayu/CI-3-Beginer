@@ -28,4 +28,9 @@ class Mahasiswa_model extends CI_Model{
         $jurusan=$data['jurusan'];
         return $this->db->query("UPDATE mahasiswa SET nama='$nama', nim='$nim', jurusan='$jurusan' WHERE id='$id'");
     }
+
+    public function delete($id){
+        
+        return $this->db->query("DELETE FROM mahasiswa WHERE id='$id'");
+    }
 }
