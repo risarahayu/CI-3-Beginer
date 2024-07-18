@@ -20,8 +20,10 @@ class Login extends CI_Controller {
 	}
 
     public function login(){
-        // karena di form methodnya Post
-        $this->Register_model->register($_POST);
-        header('Location:'.BASEURL.'Login');
+        // tangkat variable username dan password
+		$username=$_POST['username'];
+		$password=$_POST['password'];
+
+		$cek['cek'] = $this->Login_model->Login($username, $password)->resurl();
     }
 }
