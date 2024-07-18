@@ -12,11 +12,11 @@
                                         <table class="table table-striped table-bordered table-hover" id="dataTables-example">
                                             <thead>
                                                 <tr>
-                                                    <th>No.</th>
-                                                    <th>Nama Mahasiswa</th>
-                                                    <th>NIM</th>
-                                                    <th>Jurusan</th>
-                                                    <th colspan="2">Opsi</th>
+                                                    <th width="3%" class="text-center">No.</th>
+                                                    <th class="text-center">Nama Mahasiswa</th>
+                                                    <th class="text-center">NIM</th>
+                                                    <th class="text-center">Jurusan</th>
+                                                    <th width="3%" class="text-center" colspan="2">Opsi</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -26,13 +26,13 @@
                                                     $no++;
                                                 ?>
                                                     <tr class="odd gradeX">
-                                                        <td><?= $no?></td>
+                                                        <td class="text-center"><?= $no?></td>
                                                         <td><?= $row->nama ?></td>
                                                         <td><?= $row->nim ?></td>
-                                                        <td class="center"><?= $row->jurusan ?></td>
+                                                        <td class="text-center"><?= $row->jurusan ?></td>
                                                         <!-- pada ssat diklik, id akan dikirimkan  ke form melalui jquery-->
-                                                        <td class="center"><a href="#" onclick="ubah('<?= $row->id ?>')" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a></td>
-                                                        <td class="center"><a href="<?= BASEURL ?>Mahasiswa/<?= $row->id?>"><i class="fa fa-trash" style="color:red;"></i></a></td>
+                                                        <td class="text-center"><a href="#" onclick="ubah('<?= $row->id ?>')" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a></td>
+                                                        <td class="text-center"><a href="<?= BASEURL ?>Mahasiswa/delete/<?= $row->id?>"><i class="fa fa-trash" style="color:red;"></i></a></td>
                                                     </tr>
                                                 <?php
                                                     endforeach

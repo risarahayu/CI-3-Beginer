@@ -91,26 +91,32 @@ class Mahasiswa extends CI_Controller {
 		$this->load->view('template/footer');
 	}
 
-	public function update()
-	{
-		$id = $this->input->post('id');
-		$nama = $this->input->post('nama');
-		$nim = $this->input->post('nim');
-		$jurusan = $this->input->post('jurusan');
+	// public function update()
+	// {
+	// 	$id = $this->input->post('id');
+	// 	$nama = $this->input->post('nama');
+	// 	$nim = $this->input->post('nim');
+	// 	$jurusan = $this->input->post('jurusan');
 
-		// dibuatkan array sebeleum dikirim ke model
-		// id nya ga usah karena kita tidak mengubah id
-		$data=[
-			'nama'=> $nama,
-			'nim'=> $nim,
-			'jurusan'=> $jurusan
-		];
+	// 	// dibuatkan array sebeleum dikirim ke model
+	// 	// id nya ga usah karena kita tidak mengubah id
+	// 	$data=[
+	// 		'nama'=> $nama,
+	// 		'nim'=> $nim,
+	// 		'jurusan'=> $jurusan
+	// 	];
 
 		
 
-		// kirim ke model, input adalah nama function di model
-		$this->Mahasiswa_model->update($data, $id);
-		// redirect back ke halaman mahasiswa
+	// 	// kirim ke model, input adalah nama function di model
+	// 	$this->Mahasiswa_model->update($data, $id);
+	// 	// redirect back ke halaman mahasiswa
+	// 	header('Location:'.BASEURL.'/Mahasiswa');
+	// }
+
+	public function update()
+	{
+		$this->Mahasiswa_model->update($_POST);
 		header('Location:'.BASEURL.'/Mahasiswa');
 	}
 
@@ -130,6 +136,10 @@ class Mahasiswa extends CI_Controller {
 
 		$this->load->view('mahasiswa/form_update_modal', $data);
 
+	}
+
+	public function delete($id){
+			
 	}
 
 }

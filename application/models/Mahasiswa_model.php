@@ -15,9 +15,17 @@ class Mahasiswa_model extends CI_Model{
         return $this->db->query("SELECT * FROM mahasiswa WHERE id = '$id'");
     }
 
-    public function update($data, $id){
-        // akan mengubah berdasarkan id
-        $this->db->where('id', $id);
-        $this->db->update('mahasiswa', $data);
+    // public function update($data, $id){
+    //     // akan mengubah berdasarkan id
+    //     $this->db->where('id', $id);
+    //     $this->db->update('mahasiswa', $data);
+    // }
+
+    public function update($data){
+        $id=$data['id'];
+        $nama=$data['nama'];
+        $nim=$data['nim'];
+        $jurusan=$data['jurusan'];
+        return $this->db->query("UPDATE mahasiswa SET nama='$nama', nim='$nim', jurusan='$jurusan' WHERE id='$id'");
     }
 }
