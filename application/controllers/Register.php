@@ -6,19 +6,21 @@ class Register extends CI_Controller {
 	{
 		parent::__construct();
 		// load model
-		// $this->load->model('Register_model');
+		$this->load->model('Register_model');
 
 	}
 	public function index()
 	{
-		$data['title'] = 'Data Mahasiswa';
-
-		// ambil data dari model
-		// $data['mahasiswa']=$this->Mahasiswa_model->getAllMahasiswa()->result();
-
-		$this->load->view('template/header', $data);
-		$this->load->view('register/index', $data);
+	
+		$this->load->view('template/header');
+		$this->load->view('register/index');
 		$this->load->view('template/footer');
 	
 	}
+
+    public function register(){
+        // karena di form methodnya Post
+        $this->Register_model->register($_POST);
+        header('Location :'.BASEURL.'/Login');
+    }
 }
