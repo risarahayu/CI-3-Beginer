@@ -40,12 +40,12 @@ class Login extends CI_Controller {
 				'email' => $row->email
 			);
 
-			// masukan nama dan email ke dalam session user_data
-			$this->session->user_data($data_session);
+			// masukan nama dan email ke dalam session userdata
+			$this->session->set_userdata($data_session);
 			header('Location: '.BASEURL);
 		}
 
 		
-		var_dump($cek['cek']);
+		// var_dump($cek['cek']);
     }
 }
