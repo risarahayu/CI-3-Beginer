@@ -181,14 +181,14 @@
 <div class="container">
 	<div class="screen">
 		<div class="screen__content">
-			<form class="login">
+			<form class="login" action="<?=BASEURL?>/Login/login" method="POST">
 				<div class="login__field">
 					<i class="login__icon fas fa-user"></i>
-					<input type="text" class="login__input" placeholder="User name / Email">
+					<input type="text" class="login__input" placeholder="Username" name="username">
 				</div>
 				<div class="login__field">
 					<i class="login__icon fas fa-lock"></i>
-					<input type="password" class="login__input" placeholder="Password">
+					<input type="password" class="login__input" placeholder="Password" name="password">
 				</div>
 				<button class="button login__submit">
 					<span class="button__text">Log In Now</span>
