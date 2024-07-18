@@ -6,7 +6,7 @@ class Login extends CI_Controller {
 	{
 		parent::__construct();
 		// load model
-		// $this->load->model('Login_model');
+		$this->load->model('Login_model');
 
 	}
 	public function index()
@@ -22,8 +22,30 @@ class Login extends CI_Controller {
     public function login(){
         // tangkat variable username dan password
 		$username=$_POST['username'];
-		$password=$_POST['password'];
+		$password=md5($_POST['password']);
 
-		$cek['cek'] = $this->Login_model->Login($username, $password)->resurl();
+		// $cek ini menghubungkan ke model
+		$cek['cek'] = $this->Login_model->login($username, $password)->result();
+		// cek, kalau ada berarti row 1 kalo ga ada berarti rownya 0
+		$data['cek'] = $this->Login_model->login($username, $password)->num_rows();
+
+		if($data > 0){
+			foreach($cek['cek'] as $row):
+
+			endforeach;
+
+			$data_session = array(
+				// akan menampung nama dan email
+				'nama' => $row->nama,
+				'email' => $row->email
+			);
+
+			// masukan nama dan email ke dalam session user_data
+			$this->session->user_data($data_session);
+			header('Location: '.BASEURL);
+		}
+
+		
+		var_dump($cek['cek']);
     }
 }
