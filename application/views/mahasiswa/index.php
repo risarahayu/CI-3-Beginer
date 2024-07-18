@@ -32,7 +32,7 @@
                                                         <td class="text-center"><?= $row->jurusan ?></td>
                                                         <!-- pada ssat diklik, id akan dikirimkan  ke form melalui jquery-->
                                                         <td class="text-center"><a href="#" onclick="ubah('<?= $row->id ?>')" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a></td>
-                                                        <td class="text-center"><a href="<?= BASEURL ?>Mahasiswa/delete/<?= $row->id?>"><i class="fa fa-trash" style="color:red;"></i></a></td>
+                                                        <td class="text-center"><a href="<?= BASEURL ?>Mahasiswa/delete/<?= $row->id?>" onclick="return confirm('Yakin?')"><i class="fa fa-trash" style="color:red;"></i></a></td>
                                                     </tr>
                                                 <?php
                                                     endforeach
