@@ -12,7 +12,7 @@ class Mahasiswa_model extends CI_Model{
     }
 
     public function getUbah($id){
-        return $this->db->query("SELECT * FROM mahasiswa WHERE id = '$id';");
+        return $this->db->query("SELECT * FROM mahasiswa WHERE id = '$id'");
     }
 
     public function update($data, $id){

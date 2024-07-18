@@ -114,4 +114,22 @@ class Mahasiswa extends CI_Controller {
 		header('Location:'.BASEURL.'/Mahasiswa');
 	}
 
+	public function ubahModal(){
+		// id untuk mengambil id dari url ajax
+		$id = $_POST['id'];
+		
+		// echo $id; die();
+		$data['title'] = 'Ubah data';
+
+		// mengambil id dari ajax
+		// getUbah sudah ada di Model, jd ga perlu bikin lagi
+		$data['ubah']=$this->Mahasiswa_model->getUbah($id)->result();
+
+		
+		// nama folder/nama file
+
+		$this->load->view('mahasiswa/form_update_modal', $data);
+
+	}
+
 }

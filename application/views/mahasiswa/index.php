@@ -30,7 +30,8 @@
                                                         <td><?= $row->nama ?></td>
                                                         <td><?= $row->nim ?></td>
                                                         <td class="center"><?= $row->jurusan ?></td>
-                                                        <td class="center"><a href="<?= BASEURL ?>Mahasiswa/edit/<?= $row->id?>"><i class="fa fa-edit"></i></a></td>
+                                                        <!-- pada ssat diklik, id akan dikirimkan  ke form melalui jquery-->
+                                                        <td class="center"><a href="#" onclick="ubah('<?= $row->id ?>')" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a></td>
                                                         <td class="center"><a href="<?= BASEURL ?>Mahasiswa/<?= $row->id?>"><i class="fa fa-trash" style="color:red;"></i></a></td>
                                                     </tr>
                                                 <?php
@@ -70,4 +71,21 @@
                                 $('.modal-body').html(data);
                             });
                         });
+
+                        function ubah(a){
+                            // cek apakah id sudah diambil
+                            // alert(a);
+
+                            // buat ajax
+                            let url = '<?= BASEURL ?>/Mahasiswa/ubahModal';
+                            // mengirimkan variabel a menggunakan methodpost
+                            $.post(url,{
+                                // id adalah varibale baru di ajax dengan isinya adalah a berupa array ke form ubah data
+                                id:a
+                                // lalu 'data' akan menangkap id tersebut
+                            }, function(data){
+                                $('.modal-title').html('Ubah Data');
+                                $('.modal-body').html(data);
+                            })
+                        }
                     </script>
