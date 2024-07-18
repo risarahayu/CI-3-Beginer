@@ -8,6 +8,10 @@ class Login extends CI_Controller {
 		// load model
 		$this->load->model('Login_model');
 
+		// jika sessionnya sudah habis maka tidk bisa mengakses sistem
+		// cek session sttausnya tidak sama dengan login, maka tampilkan
+		
+
 	}
 	public function index()
 	{
@@ -37,7 +41,8 @@ class Login extends CI_Controller {
 			$data_session = array(
 				// akan menampung nama dan email
 				'nama' => $row->nama,
-				'email' => $row->email
+				'email' => $row->email,
+				'status'=>'Login'
 			);
 
 			// masukan nama dan email ke dalam session userdata
@@ -51,6 +56,6 @@ class Login extends CI_Controller {
 
 	public function logout(){
 		$this->session->sess_destroy();
-		header('Location: '.BASEURL);
+		header('Location:'.BASEURL.'Login');
 	}
 }

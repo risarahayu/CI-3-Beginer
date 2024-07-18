@@ -2,6 +2,16 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Welcome extends CI_Controller {
+	function __construct()
+	{
+		parent::__construct();
+		// jika sessionnya sudah habis maka tidk bisa mengakses sistem
+		// cek session sttausnya tidak sama dengan login, maka tampilkan
+		if($this->session->userdata('status') != 'Login'){
+				header('Location:'.BASEURL.'Login');
+		}
+
+	}
 
 	/**
 	 * Index Page for this controller.

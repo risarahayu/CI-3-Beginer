@@ -24,6 +24,9 @@ class Mahasiswa extends CI_Controller {
 		parent::__construct();
 		// load model
 		$this->load->model('Mahasiswa_model');
+		if($this->session->userdata('status') != 'Login'){
+			header('Location:'.BASEURL.'Login');
+		}
 
 	}
 	public function index()
