@@ -9,6 +9,6 @@ class Register_model extends CI_Model{
 
         // echo $password;die();
 
-        return $this->db->query("INSERT INTO users VALUES('','$nama', '$email', '$username', '$password')");
+        $this->db->query("INSERT INTO users VALUES('','$nama', '$email', '$username', '$password')");
     }
 }
