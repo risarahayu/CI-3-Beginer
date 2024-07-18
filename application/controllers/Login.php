@@ -48,4 +48,9 @@ class Login extends CI_Controller {
 		
 		// var_dump($cek['cek']);
     }
+
+	public function logout(){
+		$this->session->sess_destroy();
+		header('Location: '.BASEURL);
+	}
 }
