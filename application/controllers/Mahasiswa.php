@@ -34,7 +34,9 @@ class Mahasiswa extends CI_Controller {
 		$data['title'] = 'Data Mahasiswa';
 
 		// ambil data dari model
-		$data['mahasiswa']=$this->Mahasiswa_model->getAllMahasiswa()->result();
+		// result() itu menampilkan objek
+		// result_array() mengubah jadi array
+		$data['mahasiswa']=$this->Mahasiswa_model->getAllMahasiswa()->result_array();
 
 		$this->load->view('template/header', $data);
 		$this->load->view('template/nav', $data);

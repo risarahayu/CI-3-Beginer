@@ -32,7 +32,7 @@
         <!-- /#wrapper -->
 
         <!-- jQuery -->
-        <script src="<?=BASEURL ?>asset/js/jquery.min.js"></script>
+        <!-- <script src="<?=BASEURL ?>asset/js/jquery.min.js"></script> -->
 
         <!-- Bootstrap Core JavaScript -->
         <script src="<?=BASEURL ?>asset/js/bootstrap.min.js"></script>

@@ -9,14 +9,15 @@
                                     <!-- <a href="<?=BASEURL?>Mahasiswa/tambah" class="btn btn-primary" style="margin-bottom:5px;" type="button" >Add data</a> -->
                                     <a href="#" class="btn btn-primary" style="margin-bottom:5px;" type="button" data-toggle="modal" id="inputData" data-target="#myModal">Add data</a>
                                     <div class="table-responsive">
-                                        <table class="table table-striped table-bordered table-hover" id="dataTables-example">
+                                        <table class="display"id="example" style="width:100%">
                                             <thead>
                                                 <tr>
-                                                    <th width="3%" class="text-center">No.</th>
-                                                    <th class="text-center">Nama Mahasiswa</th>
-                                                    <th class="text-center">NIM</th>
-                                                    <th class="text-center">Jurusan</th>
-                                                    <th width="3%" class="text-center" colspan="2">Opsi</th>
+                                                    <th >No.</th>
+                                                    <th >Nama Mahasiswa</th>
+                                                    <th >NIM</th>
+                                                    <th >Jurusan</th>
+                                                    <th >Ubah</th>
+                                                    <th >Hapus</th>
                                                 </tr>
                                             </thead>
                                             <tbody>
@@ -26,13 +27,13 @@
                                                     $no++;
                                                 ?>
                                                     <tr class="odd gradeX">
-                                                        <td class="text-center"><?= $no?></td>
-                                                        <td><?= $row->nama ?></td>
-                                                        <td><?= $row->nim ?></td>
-                                                        <td class="text-center"><?= $row->jurusan ?></td>
+                                                        <td ><?= $no?></td>
+                                                        <td ><?= $row['nama'] ?></td>
+                                                        <td ><?= $row['nim']?></td>
+                                                        <td ><?= $row['jurusan'] ?></td>
                                                         <!-- pada ssat diklik, id akan dikirimkan  ke form melalui jquery-->
-                                                        <td class="text-center"><a href="#" onclick="ubah('<?= $row->id ?>')" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a></td>
-                                                        <td class="text-center"><a href="<?= BASEURL ?>Mahasiswa/delete/<?= $row->id?>" onclick="return confirm('Yakin?')"><i class="fa fa-trash" style="color:red;"></i></a></td>
+                                                        <td ><a href="#" onclick="ubah('<?= $row['id'] ?>')" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a></td>
+                                                        <td ><a href="<?= BASEURL ?>Mahasiswa/delete/<?= $row['id']?>" onclick="return confirm('Yakin?')"><i class="fa fa-trash" style="color:red;"></i></a></td>
                                                     </tr>
                                                 <?php
                                                     endforeach
@@ -89,3 +90,7 @@
                             })
                         }
                     </script>
+                    <script>
+                        new DataTable('#example');
+                    </script>
+                    
